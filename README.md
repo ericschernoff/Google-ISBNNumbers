@@ -17,7 +17,6 @@ Google::ISBNNumbers - Retrieve book info by ISBN number
     # $book_info now has keys for 'title', 'author_name',
     # 'description','publication_date', and 'cover_link'
     say $$book_info{title}; # says 'Modern Perl'
-    
 
 # DESCRIPTION
 
@@ -25,14 +24,14 @@ This module uses the Google Books API to retrieve basic information on a book by
 ISBN Number.  The Google Books API seems to be more complete and reliable than other
 resources for searching ISBN numbers.
 
-You will need a Google API key from [https://console.developers.google.com/apis/credentials](https://console.developers.google.com/apis/credentials).
+You will need a Google API key from [https://console.cloud.google.com/apis/credentials](https://console.cloud.google.com/apis/credentials).
 This requires setting up a basic 'Project' in that console, but no sensitive scopes are required,
 so you should be able to get the key instantly.  You can read up on the Google Books API
 here: [https://developers.google.com/books](https://developers.google.com/books)
 
 This should be one of the simplest modules you'll encounter.  The synopsis above pretty 
 much covers it. You pass your Google API key to new() and you pass a valid ISBN number
-to lookup\_isbn(), and you get back a key-&lt;gt>value hash of basic info on your book.
+to lookup\_isbn(), and you get back a key/value hash of basic info on your book.
 FYI: The ISBN number should be found on the back cover, above the bar code, and
 starts with '978'.
 
