@@ -1,12 +1,12 @@
 {
-   "abstract" : "It's new $module",
+   "abstract" : "Retrieve book info by ISBN number",
    "author" : [
-      "Eric Chernoff <eric@pepper.weaverstreet.net>"
+      "Eric Chernoff <eric@weaverstreet.net<gt>"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.11, CPAN::Meta::Converter version 2.150010",
    "license" : [
-      "perl_5"
+      "mit"
    ],
    "meta-spec" : {
       "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
@@ -42,7 +42,11 @@
       },
       "runtime" : {
          "requires" : {
-            "perl" : "5.008001"
+            "Cpanel::JSON::XS" : "4.08",
+            "HTTP::Tiny" : "0.076",
+            "IO::Socket::SSL" : "1.56",
+            "Net::SSLeay" : "1.49",
+            "perl" : "5.022001"
          }
       },
       "test" : {
@@ -52,8 +56,23 @@
       }
    },
    "release_status" : "unstable",
-   "version" : "0.01",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/ericschernoff/Google-ISBNNumbers/issues"
+      },
+      "homepage" : "https://github.com/ericschernoff/Google-ISBNNumbers",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/ericschernoff/Google-ISBNNumbers.git",
+         "web" : "https://github.com/ericschernoff/Google-ISBNNumbers"
+      }
+   },
+   "version" : "1.00",
    "x_authority" : "cpan:ECHERNOF",
+   "x_contributors" : [
+      "Eric Chernoff <eric@pepper.weaverstreet.net>",
+      "Eric Chernoff <ericschernoff@gmail.com>"
+   ],
    "x_serialization_backend" : "JSON::PP version 4.02",
    "x_static_install" : 1
 }
