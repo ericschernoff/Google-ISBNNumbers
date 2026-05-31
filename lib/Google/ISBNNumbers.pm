@@ -6,7 +6,7 @@ use Carp;
 use strict;
 use warnings;
 
-our $VERSION = "1.00";
+our $VERSION = "1.01";
 
 sub new {
 	my ($class, $google_api_key) = @_;
@@ -18,7 +18,6 @@ sub new {
 	# become self, with an HTTP::Tiny and Cpanel::JSON objects
 	my $self = bless {
 		'api_key' => $google_api_key,
-		'http' => HTTP::Tiny->new,
 		'json_coder' => Cpanel::JSON::XS->new->utf8->allow_nonref->allow_blessed,
 	}, $class;
 		
@@ -34,7 +33,10 @@ sub lookup_isbn {
 	croak "Valid ISBN number required for lookup_book()" unless $isbn_number =~ /^97/ && $isbn_number !~ /\D/;
 	
 	# do the lookup!
-	my $response = HTTP::Tiny->new->get( 'https://www.googleapis.com/books/v1/volumes?q=isbn:'.$isbn_number.'&key='.$self->{api_key} );
+	my $response = HTTP::Tiny->new->get(
+		'https://www.googleapis.com/books/v1/volumes?q=isbn:'
+		. $isbn_number . '&key=' . $self->{api_key} 
+	);
 	
 	# alert if failure
 	croak "Lookup failed: " . $response->{reason} unless $response->{success};
