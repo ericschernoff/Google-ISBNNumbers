@@ -69,19 +69,19 @@ Google::ISBNNumbers - Retrieve book info by ISBN number
 
 =head1 SYNOPSIS
 
-	use Google::ISBNNumbers;
-	
-	$books = Google::ISBNNumbers->new($your_google_api_key);
-	
-	$isbn_number = 9781680500882; # may include dashes and spaces
-	$book_info = $books->lookup_isbn( $isbn_number );
-	
-	# or, if you prefer
-	$book_info = Google::ISBNNumbers->new($your_google_api_key)->lookup_isbn($isbn_number); 
-	
-	# $book_info now has keys for 'title', 'author_name',
-	# 'description', 'publication_date', and 'cover_link'
-	say $book_info->{title}; # says 'Modern Perl'
+use Google::ISBNNumbers;
+
+$books = Google::ISBNNumbers->new($your_google_api_key);
+
+$isbn_number = 9781680500882; # may include dashes and spaces
+$book_info = $books->lookup_isbn( $isbn_number );
+
+# or, if you prefer
+$book_info = Google::ISBNNumbers->new($your_google_api_key)->lookup_isbn($isbn_number); 
+
+# $book_info now has keys for 'title', 'author_name',
+# 'description', 'publication_date', and 'cover_link'
+say $book_info->{title}; # says 'Modern Perl'
 
 =head1 DESCRIPTION
 
