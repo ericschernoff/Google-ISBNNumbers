@@ -43,7 +43,7 @@
       "runtime" : {
          "requires" : {
             "Cpanel::JSON::XS" : "4.08",
-            "HTTP::Tiny" : "0.076",
+            "HTTP::Tiny" : "0.094",
             "IO::Socket::SSL" : "1.56",
             "Net::SSLeay" : "1.49",
             "perl" : "5.022001"
