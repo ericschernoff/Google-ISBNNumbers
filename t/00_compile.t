@@ -7,7 +7,7 @@ use_ok $_ for qw(
 
 # make sure we can initiate -- note, get your own API key!
 SKIP: {
-	skip "Set an GOOGLE_API_KEY environment variable to test", 3 if !$ENV{GOOGLE_API_KEY};
+	skip "Set an GOOGLE_API_KEY environment variable to test", 2 if !$ENV{GOOGLE_API_KEY};
 
 	my $books = Google::ISBNNumbers->new($ENV{GOOGLE_API_KEY}); 
 	isa_ok( $books, 'Google::ISBNNumbers' );
