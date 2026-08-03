@@ -31,6 +31,9 @@ in that console, but no sensitive scopes are required, so you should be able to
 get the key instantly.  You can read up on the Google Books API
 here: [https://developers.google.com/books](https://developers.google.com/books)
 
+For running the small tests, place your new key in the GOOGLE\_API\_KEY 
+environmental variable.
+
 This should be one of the simplest modules you'll encounter.  The synopsis above pretty 
 much covers it. You pass your Google API key to new() and you pass a valid ISBN number
 to lookup\_isbn(), and you get back a key/value hash of basic info on your book.

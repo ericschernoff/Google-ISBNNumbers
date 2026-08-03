@@ -6,7 +6,7 @@ use Carp;
 use strict;
 use warnings;
 
-our $VERSION = "1.01";
+our $VERSION = "1.02";
 
 sub new {
 	my ($class, $google_api_key) = @_;

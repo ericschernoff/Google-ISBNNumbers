@@ -67,7 +67,7 @@
          "web" : "https://github.com/ericschernoff/Google-ISBNNumbers"
       }
    },
-   "version" : "1.01",
+   "version" : "1.02",
    "x_authority" : "cpan:ECHERNOF",
    "x_contributors" : [
       "Eric Chernoff <eric@pepper.weaverstreet.net>",
